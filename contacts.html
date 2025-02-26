@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header class="container">
+        <span class="logo">logo</span>
+        <nav>
+            <ul>
+                <li class="#"><a href="index.html">Home</a></li>
+                <li class="#"><a href="about.html">About us</a></li>
+                <li class="#"><a href="#">Portfolio</a></li>
+                <li class="#"><a href="#">News</a></li>
+                <li class="btn"><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container hero-contacts">
+        <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typsetting industry.</p>
+        <img src="images/Map.png" alt="map">
+    </div>
+
+    <div class="feedback">
+        <div class="container">
+            <h2>Say hello</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing.</p>
+
+            <form>
+                <div class="inline">
+                    <div>
+                        <label>First Name</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label>Last Name</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <label>Email Address</label>
+                <input type="email" class="one-line">
+
+                <label>Message</label>
+                <textarea class="one-line"></textarea>
+
+                <button class="button">Get in touch</button>
+            </form>            
+        </div>
+    </div>
+
+    <div class="container email">
+        <h3>Lorem Ipsum</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typsetting industry.</p>
+        <div class="block">
+            <div>
+                <h4>Stay in the loop</h4>
+                <p>Subscribe to receive latest news and updates about TDA. 
+                    We promise not to spam you!</p>
+            </div>
+            <div>
+                <input type="email" id="emailField" placeholder="Enter email address">
+                <button onclick="checkEmail()">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="blocks container">
+            <div>
+                <span class="logo">logo</span>
+                <p>Lorem Ipsum is simply dummy text of the printing and typsetting industry.</p>
+            </div>
+            <div>
+                <h4>About us</h4>
+                <ul>
+                    <a href="#"><li>Zeux</li></a>
+                    <a href="#"><li>Portfolio</li></a>
+                    <a href="#"><li>Careers</li></a>
+                    <a href="#"><li>Contact us</li></a>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact us</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typsetting industry.</p>
+                <p>+908 89097 890</p>
+            </div>
+            <div>
+                <ul class="footer_contacts">
+                    <li>
+                        <a href="#">
+                            <img src="images/facebook logo.png" width="60" height="60" class="footer_images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/instagram logo.png" width="60" height="60" class="footer_images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/twitter logo.png" width="60" height="60" class="footer_images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/linkedin logo.png" width="60" height="60" class="footer_images">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p>Copyright ® 2025 Lorem All rights Rcerved</p>
+    </footer>
+
+    <script>
+        function checkEmail() {
+            let email = document.querySelector('#emailField').value;
+            if (!email.includes('@')) alert('Please enter a valid email address with @');
+            else if (!email.includes('.')) alert('Please enter a valid email address with .');
+            else alert('Thank you for subscribing!');
+        }
+    </script>  
+</body>
+</html

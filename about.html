@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <span class="logo">logo</span>
+            <nav>
+                <ul>
+                    <li class="#"><a href="index.html">Home</a></li>
+                    <li class="active"><a href="about.html">About us</a></li>
+                    <li class="#"><a href="#">Portfolio</a></li>
+                    <li class="#"><a href="#">News</a></li>
+                    <li class="btn"><a href="contacts.html">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="hero-about container">
+            <div class="info">
+                <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typsetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s.</p>
+                <button class="btn">Get in touch</button>
+            </div>
+            <img src="images/picabout1.png" alt="picture">
+        </div>
+
+        <div class="container work">
+            <h2>Why work with us</h2>
+            <div class="blocks">
+                <div class="block">
+                    <span class="badge purple">Lorem Ipsum</span>
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typsetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s.</p>
+                </div>
+                <div class="block">
+                    <span class="badge brown">Lorem Ipsum</span>
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typsetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s.</p>
+                </div>
+                <div class="block">
+                    <span class="badge green">Lorem Ipsum</span>
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typsetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container email">
+        <h3>Lorem Ipsum</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typsetting industry.</p>
+        <div class="block">
+            <div>
+                <h4>Stay in the loop</h4>
+                <p>Subscribe to receive latest news and updates about TDA. 
+                    We promise not to spam you!</p>
+            </div>
+            <div>
+                <input type="email" id="emailField" placeholder="Enter email address">
+                <button onclick="checkEmail()">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="blocks container">
+            <div>
+                <span class="logo">logo</span>
+                <p>Lorem Ipsum is simply dummy text of the printing and typsetting industry.</p>
+            </div>
+            <div>
+                <h4>About us</h4>
+                <ul>
+                    <a href="#"><li>Zeux</li></a>
+                    <a href="#"><li>Portfolio</li></a>
+                    <a href="#"><li>Careers</li></a>
+                    <a href="contacts.html"><li>Contact us</li></a>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact us</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typsetting industry.</p>
+                <p>+908 89097 890</p>
+            </div>
+            <div>
+                <ul class="footer_contacts">
+                    <li>
+                        <a href="#">
+                            <img src="images/facebook logo.png" width="60" height="60" class="footer_images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/instagram logo.png" width="60" height="60" class="footer_images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/twitter logo.png" width="60" height="60" class="footer_images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/linkedin logo.png" width="60" height="60" class="footer_images">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p>Copyright ® 2025 Lorem All rights Rcerved</p>
+    </footer>
+
+    <script>
+        function checkEmail() {
+            let email = document.querySelector('#emailField').value;
+            if (!email.includes('@')) alert('Please enter a valid email address with @');
+            else if (!email.includes('.')) alert('Please enter a valid email address with .');
+            else alert('Thank you for subscribing!');
+        }
+    </script>
+</body>
+</html>
