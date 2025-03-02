@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacts</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -38,21 +38,21 @@
                 <div class="inline">
                     <div>
                         <label>First Name</label>
-                        <input type="text">
+                        <input type="text" title="First Name" placeholder="Enter your first name" id="first name">
                     </div>
                     <div>
                         <label>Last Name</label>
-                        <input type="text">
+                        <input type="text" title="Last Name" placeholder="Enter your last name" id="last name">
                     </div>
                 </div>
                 <label>Email Address</label>
-                <input type="email" class="one-line">
+                <input type="email" class="one-line" title="Email Address" placeholder="Enter your email address" id="email">
 
                 <label>Message</label>
-                <textarea class="one-line"></textarea>
+                <textarea class="one-line" title="Message" placeholder="Enter your message" id="message"></textarea>
 
-                <button class="button">Get in touch</button>
-            </form>            
+                <button type="submit" class="button" id="registration">Get in touch</button>
+            </form>
         </div>
     </div>
 
@@ -62,7 +62,7 @@
         <div class="block">
             <div>
                 <h4>Stay in the loop</h4>
-                <p>Subscribe to receive latest news and updates about TDA. 
+                <p>Subscribe to receive latest news and updates about TDA.
                     We promise not to spam you!</p>
             </div>
             <div>
@@ -81,10 +81,10 @@
             <div>
                 <h4>About us</h4>
                 <ul>
-                    <a href="#"><li>Zeux</li></a>
-                    <a href="#"><li>Portfolio</li></a>
-                    <a href="#"><li>Careers</li></a>
-                    <a href="#"><li>Contact us</li></a>
+                    <li><a href="#">Zeux</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact us</a></li>
                 </ul>
             </div>
             <div>
@@ -95,30 +95,34 @@
             <div>
                 <ul class="footer_contacts">
                     <li>
-                        <a href="#">
-                            <img src="images/facebook logo.png" width="60" height="60" class="footer_images">
+                        <a href="https://www.facebook.com/Eleias.Music" target="_blank" rel="noopener">
+                            <img src="images/facebook logo.png" width="60" height="60" class="footer_images"
+                                alt="Facebook logo" title="Facebook">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="images/instagram logo.png" width="60" height="60" class="footer_images">
+                            <img src="images/instagram logo.png" width="60" height="60" class="footer_images"
+                                alt="Instagram logo">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="images/twitter logo.png" width="60" height="60" class="footer_images">
+                            <img src="images/twitter logo.png" width="60" height="60" class="footer_images"
+                                alt="Twitter logo">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <img src="images/linkedin logo.png" width="60" height="60" class="footer_images">
+                        <a href="https://www.linkedin.com/in/ilja-ivanov-qa-engineer" target="_blank" rel="noopener">
+                            <img src="images/linkedin logo.png" width="60" height="60" class="footer_images"
+                                alt="LinkedIn logo">
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
         <hr>
-        <p>Copyright ® 2025 Lorem All rights Reserved</p>
+        <p>Copyright ® 2025 Lorem All Rights Reserved</p>
     </footer>
 
     <script>
@@ -128,6 +132,31 @@
             else if (!email.includes('.')) alert('Please enter a valid email address with .');
             else alert('Thank you for subscribing!');
         }
-    </script>  
+
+        let firstName = document.getElementById("first name");
+        let lastName = document.getElementById("last name");
+        let email = document.getElementById("email");
+        let message = document.getElementById("message");
+        document.getElementById("registration").onclick = function () {
+            let hasError = false;
+
+            [firstName, lastName, email, message].forEach(item => {
+                if (!item.value) {
+                    item.parentElement.style.background = "red";
+                    hasError = true;
+                } else {
+                    item.parentElement.style.background = "";
+                }
+            });
+
+            if (!hasError) {
+                [firstName, lastName, email, message].forEach(item => {
+                    item.value = "";
+                });
+                alert("Thank You! Now we stay in touch!");
+            }
+        }
+    </script>
 </body>
+
 </html
