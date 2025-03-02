@@ -28,7 +28,7 @@
                 <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typsetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s.</p>
-                <button class="btn">Get in touch</button>
+                <button class="btn" type="button" id="redirect-button">Get in touch</button>
             </div>
             <img src="images/picabout1.png" alt="picture">
         </div>
@@ -69,7 +69,7 @@
             </div>
             <div>
                 <input type="email" id="emailField" placeholder="Enter email address">
-                <button onclick="checkEmail()">Continue</button>
+                <button type="button" onclick="checkEmail()">Continue</button>
             </div>
         </div>
     </div>
@@ -124,6 +124,10 @@
     </footer>
 
     <script>
+        document.getElementById("redirect-button").addEventListener("click", function() {
+        window.location.href = "contacts.html#form-section";
+        });
+
         function checkEmail() {
             let email = document.querySelector('#emailField').value;
             if (!email.includes('@')) alert('Please enter a valid email address with @');

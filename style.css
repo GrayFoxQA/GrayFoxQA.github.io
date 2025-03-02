@@ -247,6 +247,15 @@ header nav ul li.btn a:hover, .email .block button:hover {
     margin-bottom: 15px; /*Отступ снизу от картинок*/
 }
 
+.arrow{
+    transition: all 500ms ease;
+}
+
+.arrow:hover {
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
 .projects {
     padding: 100px 0; /*Внутренние отступы от других блоков*/
 }

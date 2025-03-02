@@ -29,7 +29,7 @@
                 <h1>Work that we produce for our clients</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typsetting industry. Lorem Ipsum has been the
                     industry's standard.</p>
-                <button class="btn" type="button">Get more details</button>
+                <button class="btn" type="button" onclick="func()">Get more details</button>
             </div>
             <img src="images/Joystick.svg" alt="joystick">
         </div>
@@ -76,32 +76,32 @@
                 <div class="block">
                     <img src="images/feature1.png" alt="picture">
                     <p>Mobile Game Development</p>
-                    <img src="images/arrow.png" alt="arrow">
+                    <img src="images/arrow.png" alt="arrow" class="arrow">
                 </div>
                 <div class="block">
                     <img src="images/feature2.png" alt="picture">
                     <p>PC Game Development</p>
-                    <img src="images/arrow.png" alt="arrow">
+                    <img src="images/arrow.png" alt="arrow" class="arrow">
                 </div>
                 <div class="block">
                     <img src="images/feature3.png" alt="picture">
                     <p>PS4 Game Development</p>
-                    <img src="images/arrow.png" alt="arrow">
+                    <img src="images/arrow.png" alt="arrow" class="arrow">
                 </div>
                 <div class="block">
                     <img src="images/feature4.png" alt="picture">
                     <p>AR/VR Solutions</p>
-                    <img src="images/arrow.png" alt="arrow">
+                    <img src="images/arrow.png" alt="arrow" class="arrow">
                 </div>
                 <div class="block">
                     <img src="images/feature5.png" alt="picture">
                     <p>AR/VR Design</p>
-                    <img src="images/arrow.png" alt="arrow">
+                    <img src="images/arrow.png" alt="arrow" class="arrow">
                 </div>
                 <div class="block">
                     <img src="images/feature6.png" alt="picture">
                     <p>3D Modelings</p>
-                    <img src="images/arrow.png" alt="arrow">
+                    <img src="images/arrow.png" alt="arrow" class="arrow">
                 </div>
             </div>
         </div>
@@ -191,6 +191,10 @@
     </footer>
 
     <script>
+        function func() {
+            alert('We are a team of professional game developers');
+        }
+
         function checkEmail() {
             let email = document.querySelector('#emailField').value;
             if (!email.includes('@')) alert('Please enter a valid email address with @');

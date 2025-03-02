@@ -29,7 +29,7 @@
         <img src="images/Map.png" alt="map">
     </div>
 
-    <div class="feedback">
+    <div class="feedback" id="form-section">
         <div class="container">
             <h2>Say hello</h2>
             <p>Lorem Ipsum is simply dummy text of the printing.</p>
@@ -126,6 +126,12 @@
     </footer>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        if (window.location.hash === "#form-section") {
+        document.getElementById("form-section").scrollIntoView({ behavior: 'smooth' });
+        }
+        });
+
         function checkEmail() {
             let email = document.querySelector('#emailField').value;
             if (!email.includes('@')) alert('Please enter a valid email address with @');
